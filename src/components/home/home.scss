@@ -1,0 +1,319 @@
+.home-list {
+  padding-top: 60px;
+}
+
+//  发布页样式
+.homeTwo {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.homeTwo .homeTwo-top {
+  width: 100vw;
+
+  background-color: #fff;
+  padding: 0.4rem 0.3rem 0;
+}
+.homeTwo .homeTwo-top > div {
+  // width: 100vw;
+  border-bottom: 1px solid #888;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 0.4rem;
+}
+.homeTwo .homeTwo-top span {
+  font-size: 0.6rem;
+  color: red;
+}
+.homeTwo .homeTwo-content {
+  background-image: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1566573226464&di=b1b9a172fbed7601ccd5cb1482822600&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fblog%2F201507%2F12%2F20150712021531_C5eWm.jpeg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0.4rem 0.3rem;
+}
+.homeTwo .homeTwo-content .homeTwo-txa {
+  border: 0;
+  height: 230px;
+  background-color: transparent;
+  resize: none;
+}
+.homeTwo .homeTwo-content .addPic {
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+.homeTwo .homeTwo-content .homeTwo-content-xiangji {
+  border-bottom: 1px solid #888;
+}
+.homeTwo .homeTwo-content span {
+  color: red;
+  font-size: 0.5rem;
+}
+
+// 个人页样式
+.homethree .homethreeTop {
+  background-image: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1566636803819&di=ccada0a4ec45edc3acbf9059e5fa9826&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201703%2F22%2F20170322182115_aiBM2.thumb.1600_0.jpeg');
+  background-size: cover;
+}
+.homethree .homethreeTop .Set {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.3rem 0;
+  margin-bottom: 15px;
+  .shezhi {
+    margin-right: 0.4rem;
+    font-size: 0.6rem;
+    color: #fff;
+  }
+}
+.homethree .homethreeTop .user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 175px;
+  color: rgba(255, 255, 255, 0.8);
+  img {
+    width: 68px;
+    border-radius: 50%;
+    margin-bottom: 16px;
+  }
+  .userName {
+    font-family: serif;
+    font-size: 24px;
+    margin: 0;
+    font-weight: normal;
+
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+  }
+  p {
+    margin: 0;
+    display: flex;
+    font-size: 12px;
+
+    font-family: serif;
+    width: 120px;
+    justify-content: space-between;
+    font-weight: normal;
+    span {
+      display: flex;
+      flex-direction: column;
+      span {
+        text-align: center;
+      }
+    }
+  }
+}
+.homethree .homethreeMiddle {
+  .middleTop {
+    padding: 20px 0;
+    font-family: serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    span.middleTopLeftText {
+      font-size: 16px;
+      margin-left: 20px;
+    }
+    .middleTopRightText {
+      font-size: 14px;
+      background-color: rgb(243, 81, 81);
+      width: 70px;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      color: #fff;
+      text-align: center;
+      padding: 5px 0;
+    }
+  }
+}
+.homethree .homethreeFoot {
+  width: 100vw;
+  .footTop {
+    width: 100vw;
+    position: relative;
+    img {
+      width: 100%;
+    }
+    .btn-wrap {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100%;
+
+      display: flex;
+      span {
+        width: 50%;
+        background-color: transparent;
+      }
+    }
+  }
+}
+.homethree .homethreeFoot {
+  .footBottomBox {
+    width: 100vw;
+    overflow: hidden;
+    .footBottom {
+      width: 200vw;
+      display: flex;
+      transition: all 0.7s;
+      > div {
+        width: 100vw;
+        height: 150px;
+        display: flex;
+        justify-content: space-between;
+        img {
+          width: 49vw;
+        }
+      }
+    }
+  }
+}
+
+//个人设置 头像部分
+.homethree .setInfo,
+.homethree .userSet {
+  transition: left 0.5s;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  z-index: 9999999;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(155, 245, 245);
+  .userSetTop {
+    padding: 0 15px;
+    background-color: #fff;
+  }
+  .userSetMiddle,
+  .userSetFoot {
+    background-color: #fff;
+    ul {
+      list-style: none;
+      margin-bottom: 0;
+      padding: 0 8px 0 10px;
+      li {
+        font-size: 18px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #000;
+        padding: 7px 0;
+        > span {
+          display: flex;
+          align-items: center;
+          img {
+            width: 40px;
+            border-radius: 50%;
+          }
+          span {
+            margin-left: 12px;
+          }
+          > span.zhuYi {
+            background-color: #f00;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            color: #fff;
+            border-radius: 50%;
+            text-align: center;
+          }
+        }
+      }
+      li:last-child {
+        border: 0;
+      }
+    }
+  }
+  .xiangCe {
+    font-family: serif;
+    height: 30vh;
+    width: 100vw;
+    position: fixed;
+    left: 0;
+    bottom: -30%;
+    background-color: #fff;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    > span:first-child {
+      color: rgb(43, 41, 41);
+      border-bottom: 1px solid #fc6a6a;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      font-size: 18px;
+      width: 100%;
+      span {
+        margin-bottom: 20px;
+      }
+    }
+    > span:last-child {
+      font-size: 26px;
+      padding-top: 25px;
+    }
+  }
+  .mengCen {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 18;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+  }
+}
+.homethree .setInfo .userSetFoot ul li span img {
+  border-radius: 0;
+}
+.homethree .userSet {
+  z-index: 18;
+  position: fixed;
+  left: 100%;
+  top: 0;
+  .userSetMiddle,
+  .userSetFoot {
+    ul {
+      li {
+        padding: 9px 5px;
+        font-size: 16px;
+        .open {
+          color: #f00;
+        }
+      }
+    }
+  }
+  .logOutBox {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .logOut {
+      background-color: #f00;
+      color: #fff;
+      text-align: center;
+      border-radius: 20px;
+      font-size: 14px;
+      line-height: 30px;
+      width: 140px;
+      margin-bottom: 15px;
+      font-weight: normal;
+    }
+    span:last-child {
+      font-size: 12px;
+      color: rgb(36, 35, 35);
+      font-weight: s;
+    }
+  }
+}

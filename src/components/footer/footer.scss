@@ -1,0 +1,27 @@
+footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: #000;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 999;
+  padding: 6px 0;
+  // height: 35px;
+  a {
+    color: aliceblue;
+
+    span.iconfont {
+      display: flex;
+      flex-direction: column;
+      font-size: 25px;
+      span {
+        font-size: 12px;
+      }
+    }
+  }
+  .active {
+    color: red;
+  }
+}

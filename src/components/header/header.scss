@@ -1,0 +1,15 @@
+.index-header {
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+  height: 1.7rem;
+  background-image: url('https://dev.tencent.com/u/ljm-smile/p/images/git/raw/master/u297.jpg');
+  background-size: 100%;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  span {
+    width: 50px;
+  }
+}
