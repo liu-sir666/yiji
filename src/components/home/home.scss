@@ -1,5 +1,6 @@
 .home-list {
   padding-top: 60px;
+  padding-bottom: 70px;
 }
 
 //  发布页样式
@@ -57,6 +58,11 @@
 }
 
 // 个人页样式
+.homethree {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 .homethree .homethreeTop {
   background-image: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1566636803819&di=ccada0a4ec45edc3acbf9059e5fa9826&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201703%2F22%2F20170322182115_aiBM2.thumb.1600_0.jpeg');
   background-size: cover;
@@ -135,6 +141,7 @@
 }
 .homethree .homethreeFoot {
   width: 100vw;
+  flex-grow: 1;
   .footTop {
     width: 100vw;
     position: relative;

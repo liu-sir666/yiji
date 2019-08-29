@@ -32,7 +32,8 @@
 }
 .content .content-list {
   width: 100vw;
-  max-height: 515px;
+  // max-height: 515px;
+  height: 80vh;
   overflow: auto;
   display: flex;
   margin-bottom: 57px;
@@ -80,6 +81,11 @@
   }
 }
 
+.df-wrap {
+  display: flex;
+  flex-direction: column;
+  height: 83vh;
+}
 // 点击  心  变成红色
 .content .content-list .showlist .showlist-bot-text span .isLike {
   color: #f00;

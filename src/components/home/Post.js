@@ -14,7 +14,7 @@ class Post extends Component {
     show: true
   }
   addcomment = (e, postId) => {
-    const { val } = this.state
+    const { val, pinLunCeng } = this.state
     if (e.keyCode === 13) {
       if (val.trim()) {
         this.props.addComment(
@@ -27,8 +27,10 @@ class Post extends Component {
           },
           this.clear
         )
-        console.log(postId)
       }
+      this.setState({
+        pinLunCeng: !pinLunCeng
+      })
     }
   }
   clear = () => {

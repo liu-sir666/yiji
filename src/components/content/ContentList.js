@@ -70,7 +70,7 @@ class ContentList extends Component {
       </div>
     ))
     return (
-      <div>
+      <div className="df-wrap">
         <div className="content-top">
           <img
             style={{ display: showListImg1 ? 'block' : 'none' }}
