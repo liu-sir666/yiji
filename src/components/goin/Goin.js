@@ -90,25 +90,16 @@ class Goin extends Component {
               </span>
               <div className="login-type">
                 <span>
-                  <img
-                    src="https://dev.tencent.com/u/ljm-smile/p/images/git/raw/master/%E7%99%BB%E5%BD%95%E9%A1%B5_03.png"
-                    alt=""
-                  />
-                  <p> 微博</p>
+                  <span class="iconfont icon-weibo"></span>
+                  <span> 微博</span>
                 </span>
                 <span>
-                  <img
-                    src="https://dev.tencent.com/u/ljm-smile/p/images/git/raw/master/%E7%99%BB%E5%BD%95%E9%A1%B51_06.png"
-                    alt=""
-                  />
-                  <p>微信</p>
+                  <span class="iconfont icon-weixin"></span>
+                  <span>微信</span>
                 </span>
                 <span>
-                  <img
-                    src="https://dev.tencent.com/u/ljm-smile/p/images/git/raw/master/%E7%99%BB%E5%BD%95%E9%A1%B51_03.png"
-                    alt=""
-                  />
-                  <p>QQ</p>
+                  <span class="iconfont icon-qq"></span>
+                  <span>QQ</span>
                 </span>
               </div>
             </div>
