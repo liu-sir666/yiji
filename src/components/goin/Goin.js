@@ -7,7 +7,8 @@ import './goin.scss'
 class Goin extends Component {
   state = {
     val1: '',
-    val2: ''
+    val2: '',
+    show: false
   }
   componentDidMount() {
     new Swiper('.swiper-container', {
@@ -16,16 +17,20 @@ class Goin extends Component {
   }
 
   login = () => {
-    const { val1, val2 } = this.state
-    console.log(val1, val2)
-    console.log(this.props)
+    const { val1, val2, show } = this.state
 
     if (val1 === '1' && val2 === '2') {
       this.props.history.push('/home')
+    } else {
+      this.setState({
+        val1: '',
+        val2: '',
+        show: !show
+      })
     }
   }
   render() {
-    const { val1, val2 } = this.state
+    const { val1, val2, show } = this.state
     const pics = this.props.goin
     console.log(this.props)
 
@@ -107,6 +112,20 @@ class Goin extends Component {
                 </span>
               </div>
             </div>
+          </div>
+        </div>
+        <div style={{ display: show ? 'flex' : 'none' }} className="loginErr">
+          <div>
+            <span>请输入正确用户名、密码！</span>
+            <span
+              onClick={() =>
+                this.setState({
+                  show: !show
+                })
+              }
+            >
+              确定
+            </span>
           </div>
         </div>
       </div>
