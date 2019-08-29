@@ -8,10 +8,12 @@ const focus = payload => {
     payload
   }
 }
-const addComment = payload => {
+const addComment = (payload, clear) => {
+  console.log(clear)
   return {
     type: ADD_COMMENT,
-    payload
+    payload,
+    clear
   }
 }
 export { focus, addComment }

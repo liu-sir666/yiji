@@ -16,20 +16,32 @@ class Post extends Component {
   addcomment = (e, postId) => {
     const { val } = this.state
     if (e.keyCode === 13) {
-      this.props.addComment({
-        postId,
-        id: new Date().getTime(),
-        comment: val,
-        _userImg:
-          'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=183631055,2504247705&fm=26&gp=0.jpg'
-      })
-      console.log(postId)
+      if (val.trim()) {
+        this.props.addComment(
+          {
+            postId,
+            id: new Date().getTime(),
+            comment: val,
+            _userImg:
+              'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=183631055,2504247705&fm=26&gp=0.jpg'
+          },
+          this.clear
+        )
+        console.log(postId)
+      }
     }
   }
+  clear = () => {
+    console.log(2222222)
+
+    this.setState({
+      val: ''
+    })
+  }
   render() {
-    console.log(this.props)
+    // console.log(this.props)
     const { focus } = this.props
-    const { num, show } = this.state
+    const { num, show, val } = this.state
     const postId = this.props.match.params.id
 
     const { post, post2, otherPost, otherPost2 } = this.props
@@ -243,6 +255,7 @@ class Post extends Component {
             <span className="iconfont icon-feiji "></span>
           </div>
           <textarea
+            value={val}
             onKeyDown={event => {
               this.addcomment(event, postItem.id)
             }}
@@ -264,7 +277,7 @@ class Post extends Component {
   }
 }
 const mapStateToProps = state => {
-  console.log(state)
+  // console.log(state)
 
   return {
     post: state.post,

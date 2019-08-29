@@ -5,7 +5,7 @@ const initial = [
     id: '1',
     time: 10, //剩余天数
     isLikeNum: ['1', '2', '3', '4'], //已经关注的数量
-    isLike: true, //是否已经关注
+    isLike: false, //是否已经关注
     // 首页的图片
     postSrc:
       'https://dev.tencent.com/u/ljm-smile/p/images/git/raw/master/%E5%B1%95%E8%AE%AF%E9%A1%B5--%E6%AD%A3%E5%9C%A8%E5%B1%95%E5%87%BA_01.jpg',
@@ -227,9 +227,13 @@ export default (state = initial, action) => {
             ele => ele.id === action.payload.postId
           ).isLike = !newState.find(ele => ele.id === action.payload.postId)
             .isLike
-          newState
+          newState.find(
+            ele => ele.id === action.payload.postId
+          ).isLikeNum = newState
             .find(ele => ele.id === action.payload.postId)
             .isLikeNum.filter(ele => ele !== action.payload.id)
+          console.log(newState, action.payload.id)
+
           return newState
         } else {
           newState.find(
@@ -239,9 +243,11 @@ export default (state = initial, action) => {
           newState
             .find(ele => ele.id === action.payload.postId)
             .isLikeNum.push(action.payload.id)
+          console.log(newState)
           return newState
         }
       } else {
+        console.log(newState)
         return state
       }
     // if (newState.find(ele => ele.id === action.payload.postId)) {
@@ -264,6 +270,9 @@ export default (state = initial, action) => {
       newState
         .find(ele => ele.id === action.payload.postId)
         .pingLun.push(action.payload)
+      console.log(action)
+
+      action.clear()
       return newState
     default:
       return state
